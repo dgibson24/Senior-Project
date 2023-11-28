@@ -6,24 +6,26 @@ using UnityEngine;
 public class SwordSwinger : MonoBehaviour
 {
     Animator anim;
+    AudioSource lunge;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        lunge = GetComponent<AudioSource>();
     }
     void Update()
     {
+        anim.SetBool("SwordSwing", true);
         if (Input.GetMouseButtonDown(0))
         {
             anim.Play("SwordSwing");
-            anim.SetBool("SwordSwing", true);
+            lunge.Play();       
         }
         if(Input.GetMouseButtonDown(1))
         {
             anim.Play("BigSwing");
-            anim.SetBool("BigSwordSwing", true);
+            lunge.Play();
         }
         anim.SetBool("SwordSwing", false);
-        anim.SetBool("BigSwordSwing", false);
     }
 }
