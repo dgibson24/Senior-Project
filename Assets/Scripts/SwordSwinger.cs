@@ -16,7 +16,14 @@ public class SwordSwinger : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             anim.Play("SwordSwing");
-            anim.gameObject.GetComponent<Animator>();
+            anim.SetBool("SwordSwing", true);
         }
+        if(Input.GetMouseButtonDown(1))
+        {
+            anim.Play("BigSwing");
+            anim.SetBool("BigSwordSwing", true);
+        }
+        anim.SetBool("SwordSwing", false);
+        anim.SetBool("BigSwordSwing", false);
     }
 }

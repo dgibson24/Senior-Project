@@ -35,7 +35,7 @@ public class AN_HeroController : MonoBehaviour
         yRotation = Mathf.Clamp(yRotation, -85f, 60f);
         Cam.localRotation = Quaternion.Euler(yRotation, 0, 0);
 
-        if (Input.GetButtonDown("Jump") && jumpFlag == true) rb.AddForce(transform.up * JumpForce);
+        // if (Input.GetButtonDown("Jump") && jumpFlag == true) rb.AddForce(transform.up * JumpForce);
     }
 
     void FixedUpdate()
