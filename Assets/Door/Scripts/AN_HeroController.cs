@@ -6,11 +6,14 @@ public class AN_HeroController : MonoBehaviour
 {
     [Tooltip("Character settings (rigid body)")]
     public float MoveSpeed = 30f, JumpForce = 200f, Sensitivity = 70f;
-    bool jumpFlag = true; // to jump from surface only
+    
 
     CharacterController character;
     Rigidbody rb;
     Vector3 moveVector;
+
+    [SerializeField]
+    GameObject holding;
 
     Transform Cam;
     float yRotation;
@@ -47,16 +50,6 @@ public class AN_HeroController : MonoBehaviour
         rb.velocity = moveVector;
 
         
-    }
-    
-    private void OnTriggerStay(Collider other)
-    {
-        jumpFlag = true; // hero can jump
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        jumpFlag = false;
     }
 
 }
