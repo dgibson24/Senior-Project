@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    GameObject enemy;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    GameObject player;
+
+    [SerializeField]
+    GameObject sword;
+
+
+    private void Update()
     {
-        
+        enemy.GetComponent<>
     }
 }
