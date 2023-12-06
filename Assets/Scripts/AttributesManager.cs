@@ -21,7 +21,7 @@ public class AttributesManager : MonoBehaviour
         if(atm != null)
         {
             float totalDamage = attack;
-
+            if()
             //count RNG chance
             if(Random.Range(0f,1f) < critChance)
             {
