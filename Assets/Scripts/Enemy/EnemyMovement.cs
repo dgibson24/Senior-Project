@@ -16,18 +16,15 @@ public class EnemyMovement : MonoBehaviour
     Transform target;
     public Rigidbody rb;
     public float in_range = 1;
-    AttributesManager health;
 
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Hero").transform;
-        health = enemy.GetComponent<DamageTester>().enemyAtm2;
     }
 
     private void Update()
     {
         FollowPlayer();
-        CheckHealth();
     }
 
     public void FollowPlayer()
@@ -50,18 +47,7 @@ public class EnemyMovement : MonoBehaviour
             transform.LookAt(target);
         }
     }
-    public AttributesManager GetHealth()
-    {
-        return health;
-    }
 
-    public void CheckHealth()
-    {
-        if (GetHealth() <= 0)
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
 
     
 }
