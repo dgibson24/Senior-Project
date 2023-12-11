@@ -25,12 +25,9 @@ public class Enemy : MonoBehaviour
 
         void Die()
         {
-            Debug.Log("Enemy Died!");
+            //death anim
 
-            // die animation (if applicable)
-
-            // disable the enemy
-
+            gameObject.SetActive(false);
         }
     }
 }

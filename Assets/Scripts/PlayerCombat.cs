@@ -13,11 +13,18 @@ public class PlayerCombat : MonoBehaviour
     public float attackRange = .5f;
     public float attackDamage = 1f;
 
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
+
     private void Update()
-    {
-        if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+    {   
+        if(Time.time>= nextAttackTime)
         {
-            Attack();
+            if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+            {
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 

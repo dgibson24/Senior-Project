@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class LungeAudio : MonoBehaviour
 {
-    [SerializeField]
-    private AudioClip[] clips;
+    //[SerializeField]
+    //private AudioClip[] clips;
 
-    private AudioSource audioSource;
+    //private AudioSource audioSource;
 
-    private void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
+    //private void Awake()
+    //{
+    //    audioSource = GetComponent<AudioSource>();
+    //}
 
     public void Step()
     {
-        AudioClip clip = GetRandomClip();
-        audioSource.PlayOneShot(clip);
+    //    AudioClip clip = GetRandomClip();
+    //    audioSource.PlayOneShot(clip);
     }
 
-    private AudioClip GetRandomClip()
-    {
-        return clips[UnityEngine.Random.Range(0, clips.Length)];
-    }
+    //private AudioClip GetRandomClip()
+    //{
+    //    return clips[UnityEngine.Random.Range(0, clips.Length)];
+    //}
 }

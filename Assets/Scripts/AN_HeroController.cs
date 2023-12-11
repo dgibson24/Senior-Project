@@ -12,9 +12,6 @@ public class AN_HeroController : MonoBehaviour
     Rigidbody rb;
     Vector3 moveVector;
 
-    [SerializeField]
-    GameObject holding;
-
     Transform Cam;
     float yRotation;
 

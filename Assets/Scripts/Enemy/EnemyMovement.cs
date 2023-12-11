@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField]
     GameObject enemy;
-    private GameObject Hero, sword;
+    private GameObject Player, Sword;
 
     public float speed;
     Transform target;
@@ -16,9 +16,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Hero").transform;
-        Hero = GameObject.FindGameObjectWithTag("Hero");
-        sword = GameObject.FindGameObjectWithTag("Sword");
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Sword = Player.transform.Find("Sword/ItemHold").gameObject;
     }
 
     private void Update()
