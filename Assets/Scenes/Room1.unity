@@ -8902,9 +8902,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 669316043}
-  speed: 1
+  Sword: {fileID: 46087904}
   rb: {fileID: 669316050}
-  in_range: 1
 --- !u!54 &669316050
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33175,9 +33174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1260635039}
-  speed: 1
+  Sword: {fileID: 0}
   rb: {fileID: 1260635040}
-  in_range: 1
 --- !u!114 &1260635042
 MonoBehaviour:
   m_ObjectHideFlags: 0
