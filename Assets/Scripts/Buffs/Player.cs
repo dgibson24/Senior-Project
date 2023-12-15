@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     private LayerMask pickableLayerMask;
 
     [SerializeField]
+    private LayerMask deal;
+
+    [SerializeField]
     private Transform playerCameraTransform;
 
     [SerializeField]
