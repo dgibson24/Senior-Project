@@ -48,7 +48,4 @@ public class EnemyMovement : MonoBehaviour
             transform.LookAt(target);
         }
     }
-
-
-    
 }
