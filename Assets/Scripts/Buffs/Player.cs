@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -22,14 +22,14 @@ public class Player : MonoBehaviour
     [Min(1)]
     private float hitRange = 3;
 
-    [SerializeField]
-    private InputActionReference interactionInput;
+    //[SerializeField]
+    //private InputActionReference interactionInput;
 
     private RaycastHit hit;
 
     private void Start()
     {
-        interactionInput.action.performed += Interact;
+        //interactionInput.action.performed += Interact;
     }
 
     
@@ -54,11 +54,11 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Interact(InputAction.CallbackContext context)
-    {
-        if(hit.collider != null)
-        {
-            Debug.Log(hit.collider.name);
-        }
-    }
+    //private void Interact(interactionInput.CallbackContext context)
+    //{
+    //    if(hit.collider != null)
+    //    {
+    //        Debug.Log(hit.collider.name);
+    //    }
+    //}
 }
