@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float maxHealth;
     float currentHealth;
+    private Animator animator;
 
     private void Start()
     {
@@ -16,7 +17,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
 
-        // play hurt anim (if applicable)
+        animator.SetTrigger("Damage");
 
         if(currentHealth <= 0)
         {
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
 
         void Die()
         {
-            //death anim
+            animator.SetBool("isDead", true);
 
             gameObject.SetActive(false);
         }
