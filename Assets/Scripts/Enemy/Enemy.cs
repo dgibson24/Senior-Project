@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class Enemy : MonoBehaviour
     public float maxHealth;
     float currentHealth;
     private Animator animator;
+    public int radius = 1;
+    [SerializeField]
+    public int damage;
 
     private void Start()
     {
@@ -30,5 +34,19 @@ public class Enemy : MonoBehaviour
 
             gameObject.SetActive(false);
         }
+    }
+
+    public void Damage(int damage)
+    {   
+        Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
+        
+        foreach(Collider nearbyObject in colliders)
+        {
+            if(nearbyObject.tag == "Player" )
+            {
+                PlayerManager.TakeDamage(damage);
+            }
+        }
+        Destroy(gameObject);
     }
 }
